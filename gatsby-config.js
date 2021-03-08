@@ -3,20 +3,20 @@ module.exports = {
     title: "clearbit-gatsby",
   },
   plugins: [
-    {
-      resolve: "gatsby-source-contentful",
-      options: {
-        accessToken: "GJ4FHT8qcUy_Lj3bfkIj1f9PK5CwbkWncroRo4eyi9o",
-        spaceId: "",
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-contentful",
+    //   options: {
+    //     accessToken: "GJ4FHT8qcUy_Lj3bfkIj1f9PK5CwbkWncroRo4eyi9o",
+    //     spaceId: "",
+    //   },
+    // },
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: "",
+    //   },
+    // },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
@@ -34,6 +34,15 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+        ],
+      },
     },
   ],
 };
