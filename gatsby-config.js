@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "clearbit-gatsby",
+    siteUrl: "https://samjunior.dev",
   },
   plugins: [
     // {
